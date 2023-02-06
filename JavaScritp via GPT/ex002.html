@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercício de JS 002</title>
+    <link rel="shortcut icon" href="Graphics-Vibe-Developer-Javascript.256.png" type="image/x-icon">
+   
+</head>
+<body>
+   <input type="number" name="numero" id="caixanum"> + <input type="number" name="numero2" id="caixanum2"> <input type="button" value="somar" onclick="somar()">
+   <div id="resultado">Resultado:</div>
+   <script>
+    function somar(){
+   let exem = document.getElementById('caixanum')
+   let exem2 = document.getElementById('caixanum2')
+    let n1 = Number(exem.value)
+    let n2 = Number(exem2.value)
+    let n3 = n1 + n2
+    resultado.innerHTML = `Resultado: a soma do ${n1} + ${n2} é: <strong>${n3}</strong>`
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Javascript n09</title>
+    <style>
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" name="" id="caixatxt">
+    <input type="button" value="Mostrar" onclick="mostrar()">
+    <script>
+        
+        function mostrar(){
+        let results = document.getElementById('res')
+        let pegar = document.getElementById('caixatxt')
+        let txt = pegar.value
+        let arraycaract = txt.split('').sort()
+        let stringOrde = arraycaract.join('')
+        arraycaract.sort()
+        results.innerHTML = stringOrde
+        
+    }
+    
+    
+    </script>
+    <div id="res"></div>
+</body>
+</html>

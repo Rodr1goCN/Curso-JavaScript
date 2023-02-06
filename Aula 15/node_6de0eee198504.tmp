@@ -1,0 +1,15 @@
+let numeros = [4, 10, 8, 6, 3, 1]
+
+
+/*
+console.log(numeros[0])
+console.log(numeros[1])
+console.log(numeros[2])
+console.log(numeros[3])
+console.log(numeros[4])
+console.log(numeros[5])
+*/
+
+for(let pos=0 ;numeros.length ;pos++ ){
+    console.log(`A posição ${pos} tem o valor ${numeros[pos]}`)
+}

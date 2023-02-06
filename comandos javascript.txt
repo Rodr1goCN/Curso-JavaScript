@@ -1,0 +1,295 @@
+window.alert      (somente ok)
+windows.confirm   (botão ok e cancelar)
+windows.prompt    (preencher com alguma informação)
+
+//       comentário somente com uma linha
+/* */    comentário com várias linhas (comentário em CSS)
+<!-- --> comentário em HTML
+
+Sinal de = no JavaScript tem o nome de RECEBE
+Sinal de + CONCATENAÇÃO
+
+string         (conjunto de caracteres(letras) ou pode ser numero de cpf, identidade)
+true false     (valor boolean)
+number         (conjunto de numeros)
+typeof         (verificar os tipos)
+
+Number.parseInt(n)    (números inteiros --- parse = converter)
+Number.parseFloat(n)  (números flutuantes, reais, 5.5 - 10.5 --- parse = converter)
+Number                (pode ser os dois: parseInt e parseFloat)
+String(n)             (converte número para uma string)
+n.toString()          (converte número para uma string)
+s.length              (quantos caracteres a string tem)
+s.toUpperCase()       (tudo para MAIÚSCULAS)
+s.toLowerCase()       (tudo para minúsculas)
+s.toFixed()           (conserta para x casas depois do "." ex.: 1545.5 > 1545.50)
+.replace()            (troca o '.' para ',' ou vice-versa ex.: 1545.5 > 1545,50) 
+s.toLocalString()     (muda o número para dinheiro do país ex.: (s.toLocalString('pt-BR', {style: 'currency', currency: 'BRL'})  (onde o BRL pode ser USD para mostrar formato do EUA)
+
+
+'Eu estou aprendendo s'      // não faz interpolação
+'Eu estou aprendendo' + s    // usa concatenação
+`Eu estou aprendendo ${s}`   // usa template string 
+
+exemplo: 
+<script>
+var num = window.prompt('Digite um número!')
+var num2 = window.prompt('Digite outro número)
+var soma = num + num2
+
+window.alert('A soma do número é '+ soma +'') // desse jeito ira mostrar a junção dos números num + num2, então se usa `` e ${soma}
+
+// (number + number) para adição
+// (string + string) concatenação
+// para somar dentro do '' ou "" usa-se o '+ String(soma)' ou '+ soma.toString()'
+
+
+%                     (no JavaScript a % é o resto da divisão inteira ex.: 5 % 2 = 1)
+**                    (no JavaScript o ** é a potência ex.: 5 ** 2 = 25)
+
+Ordem de precedência
+()           - primeiro parênteses                                      |
+**           - segundo potência                                         |
+* / %        - terceiro multiplicação - divisão - resto da divisão      |
++ -          - quarto adição e diminuição                              \/
+
+var a = 5 + 3
+8
+var b = a % 5
+3
+var c = 5 * b ** 2
+45
+var d = 10 - a / 2
+6
+var e = 6 * 2 / d
+2
+var f = b % e + 4 / e
+3
+
+var n = 3         simplificado
+
+n = n + 4           n += 4
+n = n - 5           n -= 5
+n = n * 4           n *= 4
+n = n / 2           n /= 2
+n = n ** 2          n **= 2
+n = n % 5           n %= 5
+
+var num = 10      incremento
+                     
+num = num + 10      num ++
+num = num - 5       num --
+
+Relacionais
+>=                     (maior ou igual)
+<=                     (menor ou igual)
+==                     (sinal de igualdade)
+!=                     (diferente)
+===                    (mesmo valor e mesmo tipo, identico)
+!==                    (desigual restrito, tipos diferentes)
+
++=                     (quando for string: concatenado (recebe ele mesmo mais...))
+-=                     (vai perder algo)
+*=                     (recebe a variavel e multiplica, exemplo: variavel *= c)
+
+++                     (exemplo: var c = 1   //    c = c + 1)
+
+Lógicos
+!                      (negação)
+&&                     (conjunção - equivalente ao 'e')
+||                     (disjunção - equivalente ao 'ou')
+
+exemplo: 
+var a = 5
+var b = 8
+
+a > b && b % 2 == 0
+
+ordem que é feito: primeiro os aritiméticos (b % 2), depois os relacionais (a > b) e por último operadores lógicos (&&)
+
+ordem operadores lógicos: primeiro ! (não), depois o && (e) e por último || (ou) 
+
+Exemplos:
+idade >= 15 && idade <= 17            // a idade esta entre 15 e 17?
+estado == "RJ" || estado == "SP"     // o estado é RJ ou SP?
+salário > 1500 && sexo != "M"       // o salário é acima de 1500 e não é homem?
+  
+
+exemplo - disjunção
+
+true  || true  - true
+true  || false - true
+false || true  - true
+false || false - false
+
+exemplo conjunção
+
+true  && true  - true
+true  && false - false
+false && true  - false
+false && false - false
+
+Ternário
+
+Teste ? true : false
+
+exemplo:
+média >= 7.0 ? "aprovado" : "reprovado"
+
+? - se for
+: - se não for
+
+
+Árvore DOM
+
+             window
+
+      /        |           \
+   location - document - history
+                 |
+                html
+              /      \
+            head -   body
+       /      |      ||||
+     meta - title    ||||
+                    / || \
+                  h1-p-p-div
+                       |
+                     strong
+
+
+Pode acessar os elementos por:
+Marca
+ID
+Nome
+Classe
+Seletor
+
+Dentro do elemento Marca:
+
+getElementsByTagName()
+
+Dentro do elemento ID
+
+getElementById()
+
+Dentro do elemento Nome
+
+getElementsByName()
+
+Dentro do elemento Classe
+
+getElementsByClassName()
+
+Dentro do elemento Seletor
+
+querySelector()
+querySelectorAll()
+
+
+
+Toda div é representada por # e toda classe é representada por um .
+
+
+
+
+if                  (se)
+else                (se não)
+
+
+if (condição) {            (condição simples)
+       true
+}   
+  
+
+       
+if (condição) {           (condição composta)
+       true
+} else{
+       false
+}
+
+
+
+if (condição){
+       bloco1
+} else{
+    if (condição2) {      (condição aninhada)
+           bloco2
+} else {
+           bloco3
+}
+
+
+
+
+switch (expressão){       (condição múltipla)
+case valor 1:
+
+break
+case valor 2:
+
+break
+case valor 3:
+
+break
+default:
+
+break
+}
+
+
+exemplo:
+
+switch (diaSem){
+
+case 0:
+console.log('domingo')
+break
+}
+
+
+
+Repetições-
+
+for (inicio ; teste ; incremento){
+}
+
+
+Exemplo: for (var c=1; c<=10; c++){
+}
+
+
+
+variáveis compostas de dez posições começa pelo 0 até o 9
+
+Um array é uma variável composta que tem vários elementos. Cada elemento é composto por seu valor e por uma chave (key) de identificação
+
+Let num = [] //Qualquer valor entre colchetes e atribuir uma variavel, que essa variável vira um vetor
+
+
+variavel.sort()       //organiza do menor para o maior (tem que ser usado depois do push())
+variavel.push(1)      //adiciona o numero 1 no final do array
+variavel.indexOf(7)   //retorna o índice do primeiro elemento igual ao elemento especificado, ou -1 se o elemento não estiver presente
+arr.pop()             //remove e retorna o último elemento do array
+arr.shift()           //remove e retorna o primeiro elemento do array
+arr.unshift(elemento) //adiciona um elemento ao início do array
+ 
+
+
+
+Funções são acões executadas assim que são chamada ou em decorrência de algum evento
+
+
+
+
+
+...daqui pra frente
+
+function
+objetos
+modularização
+RegEx
+JSON
+AJAX
+NodeJS

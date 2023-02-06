@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="" id="caixanum"> <input type="button" value="Mostrar" onclick="parounao()">
+    <script>
+        
+        function parounao(){
+    let pegar = document.getElementById('caixanum')
+    let results = document.getElementById('res')
+    let num = Number(pegar.value)
+    if(num%2 == 0){
+        results.innerHTML = "true"
+    }else{
+        results.innerHTML = 'false'
+    }
+}
+    </script>
+    <div id="res">Se o número for <span style="color: crimson;">PAR</span> é <strong>TRUE</strong> e <span style="color: crimson; ">ÍMPAR</span> é <strong>FALSE</strong></div>
+</body>
+</html>
