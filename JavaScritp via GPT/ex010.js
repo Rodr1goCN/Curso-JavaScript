@@ -1,10 +1,10 @@
-let string = 'coisa' 
+let string = 'furtaram' 
 let array = string.split('').sort()
 console.log(array)
 
 
 
-let string2 = 'banana'
+let string2 = 'furtaram'
 let array2 = string2.split('').sort()
 console.log(array2)
 
